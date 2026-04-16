@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Belief Matrix is a SQLite database mapping 237 religious and philosophical traditions against 133 belief-dimension columns. Each column represents a differentiating belief or practice that contributes to a tradition's "fingerprint." The belief columns are typed as REAL for eventual weighted parameterization (values TBD, currently all NULL).
+Belief Matrix is a SQLite database mapping 238 religious and philosophical traditions against 134 belief-dimension columns. Each column represents a differentiating belief or practice that contributes to a tradition's "fingerprint." The belief columns are typed as REAL for eventual weighted parameterization (values TBD, currently all NULL).
 
 ## Architecture
 
@@ -30,14 +30,14 @@ Always rebuild traditions.db after editing traditions.sql, and commit both files
 
 ## Schema Structure
 
-The `traditions` table has three fixed columns (`id`, `name`, `category`) followed by 133 REAL columns grouped into 9 domains:
+The `traditions` table has three fixed columns (`id`, `name`, `category`) followed by 134 REAL columns grouped into 9 domains:
 
 | Domain | Columns |
 |---|---|
 | Theology / Metaphysics | 18 |
 | Self / Soul / Consciousness | 9 |
 | Epistemology | 12 |
-| Ethics | 22 |
+| Ethics | 23 |
 | Soteriology | 20 |
 | Practice / Ritual | 19 |
 | Community / Authority / Structure | 16 |

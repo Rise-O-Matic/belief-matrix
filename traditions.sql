@@ -79,6 +79,7 @@ CREATE TABLE IF NOT EXISTS traditions (
     gender_egalitarianism REAL,         -- no spiritual distinction by gender
     universal_moral_law REAL,           -- one morality applies to all beings
     moral_contextualism REAL,           -- morality varies by situation, culture, or role
+    attention_as_ethical_primitive REAL,-- quality of perception/awareness is itself the moral ground (Weil, Murdoch, sati)
 
     -- ============================================================
     -- SOTERIOLOGY — What is the goal? How is it achieved?
@@ -377,6 +378,7 @@ INSERT INTO traditions (name, category) VALUES
 ('Effective Altruism', 'Ethical Philosophy'),
 ('Secular Humanism', 'Ethical Philosophy'),
 ('Ethical Egoism', 'Ethical Philosophy'),
+('Reflexive Inferentialism', 'Ethical Philosophy'),
 
 -- Political Philosophy
 ('Liberalism (Classical)', 'Political Philosophy'),
@@ -2784,3 +2786,48 @@ UPDATE traditions SET
     systematic_theology=1, philosophical_rigor=1, mythological_narrative=2, legal_code=1,
     poetic_or_mystical_expression=2, commentarial_tradition=2, anti_rationalism=0, dialectical_method=1
 WHERE name='Lingayatism';
+
+-- ============================================================
+-- CONTEMPORARY PHILOSOPHY: REFLEXIVE INFERENTIALISM
+-- Brandom-descended inferentialism where the game of giving and asking
+-- for reasons norms itself; attention to one's own inferential moves
+-- and implicit commitments is the load-bearing moral capacity.
+-- ============================================================
+
+UPDATE traditions SET
+    monotheism=-1, polytheism=-1, pantheism=0, panentheism=0, deism=-1, nontheism=2,
+    animism=-1, cosmic_dualism=-2, monism=0, metaphysical_materialism=0, metaphysical_idealism=0,
+    emanationism=-1, personal_god=-2, creator_deity=-1, eternal_universe=0, cyclical_cosmology=0,
+    multiple_realms=-2, reality_as_illusion=-1,
+    immortal_soul=-2, no_self=1, reincarnation=-2, bodily_resurrection=-3, karma=-1,
+    original_sin=-2, innate_goodness=0, mind_body_dualism=-1, consciousness_as_fundamental=1,
+    divine_revelation=-3, scriptural_authority=-2, scriptural_inerrancy=-3, oral_tradition=0,
+    reason_as_path=3, empirical_observation=1, mystical_experience=-1, guru_or_lineage_authority=-2,
+    apophatic_theology=0, skepticism_toward_metaphysics=2, esoteric_knowledge=-2, progressive_revelation=0,
+    divine_command_ethics=-3, natural_law_ethics=-1, virtue_cultivation=1, duty_bound_ethics=1,
+    consequentialist_ethics=0, nonviolence=1, just_war_doctrine=0, asceticism=0, world_affirming=1,
+    celibacy_valued=0, dietary_restrictions=0, compassion_as_highest_virtue=1, justice_as_highest_virtue=2,
+    detachment=0, self_sacrifice=0, individual_autonomy=2, communal_obligation=2,
+    environmental_stewardship=1, gender_complementarity=-1, gender_egalitarianism=2,
+    universal_moral_law=1, moral_contextualism=2, attention_as_ethical_primitive=3,
+    salvation_by_faith=-3, salvation_by_works=0, salvation_by_grace=-2, liberation_from_cycle=-1,
+    union_with_divine=-2, enlightenment_awakening=0, heaven_and_hell=-3, purgatorial_state=-2,
+    annihilationism=0, universal_salvation=0, predestination=-3, self_effort=2,
+    surrender_to_divine=-3, merit_transfer=-2, ancestor_veneration=0, this_worldly_focus=3,
+    messianic_expectation=-3, apocalyptic_eschatology=-3, cyclical_ages=-1, deification_theosis=-2,
+    petitionary_prayer=-2, contemplative_meditation=2, ritual_worship=-2, sacraments=-3,
+    pilgrimage=-2, fasting=0, chanting_or_mantra=-1, divination=-3, sacrifice_or_offering=-3,
+    rites_of_passage=0, sabbath_or_sacred_time=-1, monasticism=-1, entheogens=0,
+    ecstatic_practice=-1, confession_or_repentance=1, baptism_or_purification=-3,
+    liturgical_calendar=-2, iconography_sacred_art=0, sacred_music=0,
+    clergy_hierarchy=-3, centralized_authority=-2, congregational_autonomy=2, proselytism=-1,
+    exclusivism=-3, inclusivism=1, pluralism=2, chosen_people=-3,
+    caste_or_spiritual_hierarchy=-3, radical_egalitarianism=2, lay_spiritual_authority=2,
+    church_state_unity=-3, church_state_separation=2, communal_living=0,
+    formal_initiation=-2, ethnic_or_cultural_boundedness=-3,
+    creation_ex_nihilo=-2, creation_from_chaos=0, science_compatible=2, sacred_geography=-2,
+    cosmic_hierarchy_of_beings=-3, nature_as_sacred=0, nature_as_fallen=-2,
+    teleological_universe=-1, enchanted_world=-2,
+    systematic_theology=0, philosophical_rigor=3, mythological_narrative=-1, legal_code=0,
+    poetic_or_mystical_expression=0, commentarial_tradition=1, anti_rationalism=-3, dialectical_method=3
+WHERE name='Reflexive Inferentialism';
